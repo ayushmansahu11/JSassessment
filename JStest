@@ -1,0 +1,29 @@
+const Students = [];  
+ function mintStudent (name, age, state , section ) { 
+     const Student = { 
+         'Name' : name, 
+         'Age' : age, 
+         'State' : state, 
+         'Section' : section
+     } 
+     Students.push(Student); 
+     console.log("Minted: "+ name); 
+ } 
+ function listStudents () { 
+     for(let i = 0; i < Students.length; i++){ 
+         console.log("\nID:\t\t\t " + (i + 1)) 
+         console.log("Name:\t\t " + Students[i].Name); 
+         console.log("Age:\t\t " + Students[i].Age); 
+         console.log("State:\t " + Students[i].State); 
+         console.log("Section:\t " + Students[i].Section); 
+     } 
+ } 
+ function getTotalSupply() { 
+     console.log(Students.length); 
+ } 
+ mintStudent("Ayush", 20, "Vizag", "106"); 
+ mintStudent("Ujjwala", 19, "Warangal", "107"); 
+ mintStudent("Anudeep", 20, "Vijayanagaram", "108"); 
+ mintStudent("Gopi", 21, "Srikakulam", "109"); 
+ listStudents(); 
+ getTotalSupply();
